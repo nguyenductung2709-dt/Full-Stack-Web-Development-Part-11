@@ -9,18 +9,18 @@ jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v4 #uses is used to run a specific action. An action is a reusable piece like a function
-                                  #actions/checkout is used to checkouts the project source code of Git
-        path: ./Pokemon
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' #setup nodejs to be able to use command in package.json
+          node-version: '20'
 
       - name: Install dependencies
-        run: npm install #install dependencies
+        run: npm install
         working-directory: ./Pokemon
 
       - name: Check style 
-        run: npm run eslint #use command in package.json
+        run: npm run eslint
         working-directory: ./Pokemon
