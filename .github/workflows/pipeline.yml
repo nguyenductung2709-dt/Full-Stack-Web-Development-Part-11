@@ -37,5 +37,5 @@ jobs:
         run: npm run start-prod
         working-directory: ./Pokemon
       
-      -  name: end to end testing
+      - name: end to end testing
         run: npm run cypress:open
