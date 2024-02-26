@@ -38,7 +38,7 @@ jobs:
         with:
           command: npm run cypress:run
           start: npm run start-prod
-          wait-on: http://localhost:8000
+          wait-on: http://localhost:3000
           working-directory: ./Pokemon
 
       - name: Trigger deployment
