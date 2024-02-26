@@ -24,3 +24,11 @@ jobs:
       - name: Check style 
         run: npm run eslint
         working-directory: ./Pokemon
+      
+      - name: build 
+        run: npm run build
+        working-directory: ./Pokemon
+
+      - name: test
+        run: npm run test
+        working-directory: ./Pokemon
