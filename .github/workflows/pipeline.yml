@@ -62,7 +62,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   inform_via_discord:
-    needs: [simple_deployment_pipeline]
+    needs: [tag_release]
     runs-on: ubuntu-20.04
     steps:
       - name: Test Success
